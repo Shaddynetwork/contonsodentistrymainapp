@@ -53,7 +53,7 @@ class DentaBot extends ActivityHandler {
             //  return;
             // }
             // else {...}
-            await next();
+            
         });
 
         this.onMembersAdded(async (context, next) => {
