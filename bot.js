@@ -32,7 +32,7 @@ class DentaBot extends ActivityHandler {
                 // determine which service to respond with based on the results from LUIS //
                 let message;
                 // if(top intent is intentA and confidence greater than 50){
-                if (result.intent[topIntent].score > 0.5) {
+                if (result.intent[topIntent].score > 0.65) {
                     if (topIntent === 'getAvailability') {
                         message = await this.DentistScheduler.getAvailability(this.IntentRecognizer.getTimeEntity(result));
                     } else {
@@ -53,7 +53,6 @@ class DentaBot extends ActivityHandler {
             //  return;
             // }
             // else {...}
-            
         });
 
         this.onMembersAdded(async (context, next) => {
