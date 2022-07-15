@@ -61,19 +61,19 @@ adapter.onTurnError = onTurnErrorHandler;
 
 // Map configuration values values from .env file into the required format for each service.
 const QnAConfiguration = {
-    knowledgeBaseId: process.env.QnAKnowledgebaseId,
-    endpointKey: process.env.QnAAuthKey,
-    host: process.env.QnAEndpointHostName
+    knowledgeBaseId: process.env.QNAKNOWLEDGEBASEID,
+    endpointKey: process.env.QNAAUTHKEY,
+    host: process.env.QNAENDPOINTHOSTNAME
 };
 
 const LuisConfiguration = {
-    applicationId: process.env.LuisAppId,
-    endpointKey: process.env.LuisApiKey,
-    endpoint: process.env.LuisApiHostName
+    applicationId: process.env.LUISAPPID,
+    endpointKey: process.env.LUISAPIKEY,
+    endpoint: process.env.LUISAPIHOSTNAME
 };
 
 const SchedulerConfiguration = {
-    SchedulerEndpoint: process.env.SchedulerEndpoint
+    SchedulerEndpoint: process.env.SCHEDULERENDPOINT
 };
 // pack each service configuration into
 const configuration = {
