@@ -2,7 +2,7 @@ const path = require('path');
 
 const dotenv = require('dotenv');
 // Import required bot configuration.
-const ENV_FILE = path.join(__dirname, 'template.env');
+const ENV_FILE = path.join(__dirname, '.env');
 dotenv.config({ path: ENV_FILE });
 
 const restify = require('restify');
@@ -28,8 +28,8 @@ server.listen(process.env.port || process.env.PORT || 3978, () => {
 });
 
 const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-    MicrosoftAppId: process.env.MicrosoftAppId,
-    MicrosoftAppPassword: process.env.MicrosoftAppPassword
+    MicrosoftAppId: process.env.MICROSOFTAPPID,
+    MicrosoftAppPassword: process.env.MICROSOFTAPPPASSWORD
 });
 
 const botFrameworkAuthentication = createBotFrameworkAuthenticationFromConfiguration(null, credentialsFactory);
